@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		1BFB7506180898CD00B71552 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFB7505180898CD00B71552 /* Cocoa.framework */; };
 		1BFB7510180898CD00B71552 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BFB750E180898CD00B71552 /* InfoPlist.strings */; };
+		1BFB751818089F6D00B71552 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFB751718089F6D00B71552 /* Adium.framework */; };
+		1BFB751B18089FC600B71552 /* LollerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB751A18089FC600B71552 /* LollerPlugin.m */; };
+		1BFB75241808AA3200B71552 /* laughs in Resources */ = {isa = PBXBuildFile; fileRef = 1BFB75231808AA3200B71552 /* laughs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1BFB7502180898CD00B71552 /* Loller.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Loller.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFB7502180898CD00B71552 /* Loller.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Loller.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFB7505180898CD00B71552 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1BFB7508180898CD00B71552 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BFB7509180898CD00B71552 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -20,6 +23,10 @@
 		1BFB750D180898CD00B71552 /* Loller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Loller-Info.plist"; sourceTree = "<group>"; };
 		1BFB750F180898CD00B71552 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1BFB7511180898CD00B71552 /* Loller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loller-Prefix.pch"; sourceTree = "<group>"; };
+		1BFB751718089F6D00B71552 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		1BFB751918089FC600B71552 /* LollerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LollerPlugin.h; sourceTree = "<group>"; };
+		1BFB751A18089FC600B71552 /* LollerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LollerPlugin.m; sourceTree = "<group>"; };
+		1BFB75231808AA3200B71552 /* laughs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = laughs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BFB7506180898CD00B71552 /* Cocoa.framework in Frameworks */,
+				1BFB751818089F6D00B71552 /* Adium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +45,9 @@
 		1BFB74F9180898CD00B71552 = {
 			isa = PBXGroup;
 			children = (
+				1BFB75231808AA3200B71552 /* laughs */,
+				1BFB751918089FC600B71552 /* LollerPlugin.h */,
+				1BFB751A18089FC600B71552 /* LollerPlugin.m */,
 				1BFB750B180898CD00B71552 /* Loller */,
 				1BFB7504180898CD00B71552 /* Frameworks */,
 				1BFB7503180898CD00B71552 /* Products */,
@@ -46,7 +57,7 @@
 		1BFB7503180898CD00B71552 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BFB7502180898CD00B71552 /* Loller.bundle */,
+				1BFB7502180898CD00B71552 /* Loller.AdiumPlugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +74,7 @@
 		1BFB7507180898CD00B71552 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BFB751718089F6D00B71552 /* Adium.framework */,
 				1BFB7508180898CD00B71552 /* Foundation.framework */,
 				1BFB7509180898CD00B71552 /* CoreData.framework */,
 				1BFB750A180898CD00B71552 /* AppKit.framework */,
@@ -105,7 +117,7 @@
 			);
 			name = Loller;
 			productName = Loller;
-			productReference = 1BFB7502180898CD00B71552 /* Loller.bundle */;
+			productReference = 1BFB7502180898CD00B71552 /* Loller.AdiumPlugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -139,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFB75241808AA3200B71552 /* laughs in Resources */,
 				1BFB7510180898CD00B71552 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFB751B18089FC600B71552 /* LollerPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,12 +253,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/csinchok/Development/Loller,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Loller/Loller-Prefix.pch";
 				INFOPLIST_FILE = "Loller/Loller-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Debug;
 		};
@@ -252,12 +270,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/csinchok/Development/Loller,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Loller/Loller-Prefix.pch";
 				INFOPLIST_FILE = "Loller/Loller-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Release;
 		};
