@@ -11,16 +11,31 @@
 @implementation LollerPlugin
 @synthesize laughPaths;
 
+- (void) laugh {
+    NSUInteger randomIndex = arc4random() % [self.laughPaths count];
+    NSSound *laugh = [[NSSound alloc] initWithContentsOfFile: [self.laughPaths objectAtIndex:randomIndex] byReference:YES];
+    [laugh play];
+}
 
 - (void) gotMessage:(NSNotification *) notification {
     id contentMessage = [notification.userInfo objectForKey:@"AIContentObject"];
     NSAttributedString *message = (NSAttributedString *)[contentMessage message];
     if ([[[message string] lowercaseString] rangeOfString:@"lol"].location != NSNotFound) {
-        NSUInteger randomIndex = arc4random() % [self.laughPaths count];
-        NSSound *laugh = [[NSSound alloc] initWithContentsOfFile: [self.laughPaths objectAtIndex:randomIndex] byReference:YES];
-        [laugh play];
+        [self laugh];
+        return;
     }
-    NSLog(@"Message: %@", message);
+    if ([[[message string] lowercaseString] rangeOfString:@"rofl"].location != NSNotFound) {
+        [self laugh];
+        return;
+    }
+    if ([[[message string] lowercaseString] rangeOfString:@"haha"].location != NSNotFound) {
+        [self laugh];
+        return;
+    }
+    if ([[[message string] lowercaseString] rangeOfString:@"rofl"].location != NSNotFound) {
+        [self laugh];
+        return;
+    }
 }
 
 - (void) installPlugin
