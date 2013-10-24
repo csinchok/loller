@@ -28,11 +28,11 @@
         [self laugh];
         return;
     }
-    if ([[[message string] lowercaseString] rangeOfString:@"haha"].location != NSNotFound) {
+    if ([[[message string] lowercaseString] rangeOfString:@"hah"].location != NSNotFound) {
         [self laugh];
         return;
     }
-    if ([[[message string] lowercaseString] rangeOfString:@"rofl"].location != NSNotFound) {
+    if ([[[message string] lowercaseString] rangeOfString:@"heh"].location != NSNotFound) {
         [self laugh];
         return;
     }
